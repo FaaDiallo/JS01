@@ -1,31 +1,34 @@
 <html>
 	<body>
 	<b>Mad Libs Game!!!</b>
-	<b>Once upon a time, there was a(n)</b>
-	<label for="animal">please enter an animal:</label>
-	<input type="text" id="NOUN"></input>
-	<span id="awordspan"></span>
+	<label for="noun">please enter an animal:</label>
+	<input type="text" id="noun"></input>
 	<br/>
 	<b> and 
 	<label for="verb">Please enter a verb:</label>
 	<input type="text" id="verb"></input>
-	<span id="idforverb"></span>
 	<br/>
+	<button onclick="noun()"></button>
+	<b>once upon a time there was a <span id="awordspan"></span> this <span id="awordspan"></span> was very <span id="idforverb"></span></b>
+
+
 	<script>
 	function noun() {
-		var animal = document.getElementById("animal");
+		var noun = document.getElementById("noun");
 		var wordz = noun.value;
 		console.log(wordz); 
 
-		var awordspan = document.getElementById("awordspan") awordspan.textContent = aword;
+		var awordspan = document.getElementById("awordspan");
+		awordspan.textContent = wordz;
 	}
 	function verb() {
 		var verb = document.getElementById("verb");
 		var verbb = verb.value;
 		console.log(verbb);
 
-		var verbspan = document.getElementById("")
+		var verbspan = document.getElementById("idforverb");idforverb.textContent = verbb;
 	}
 	</script>
+
 	</body>
 	</html>
