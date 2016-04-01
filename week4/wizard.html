@@ -1,0 +1,41 @@
+<html>
+	<!-- the <br/> tag creates another line in your code instead of it being white space.. You don't need two -->
+	<body>
+<b>Week</b> 
+<u>4</u><br/> 
+<i>of</i> 
+<b>NANOHACKER</b> 
+<u>academy</u>
+	<label for"name">Insert text: </label>
+	
+	<input type="text" id="name"></input>
+		<!--the label just explains the text box. And the input is the physical text box. -->
+				<br/>
+	<button onclick="double();">Double</button>
+    <span id="outputspan"></span>
+    			<br/>
+
+    	<script>
+    		function double() {
+    			console.log("you clicked double!");
+    			
+    			//1.find the text box
+    			var stringinput = document.getElementById("name");
+    			
+    			//2.take out the text
+    			var Mystring = stringinput.value;
+    			
+    			//3. double the text
+    			var doublestring = Mystring + Mystring; 
+    			console.log(doublestring.toUpperCase());
+    			//4. find the span and the span is an unspecific tag to explain that there will be text in there, but there isn't a specific height and weight... Its where the answer or "Output" goes. 
+    			var span = document.getElementById("outputspan");
+
+    			//5. put doubled text into the span
+    			span.textContent = doublestring;
+    		}
+    		
+    	</script>
+    </body>
+
+</html>
