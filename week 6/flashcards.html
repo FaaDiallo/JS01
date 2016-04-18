@@ -1,0 +1,53 @@
+<html>
+  <head>
+    <style>
+      body {
+        font-family: Helvetica;
+        text-align: center;
+      }
+      #card {
+        width: 500px;
+        padding: 120px 0;
+        margin: 50px auto;
+        border: 5px solid darkseagreen;
+        border-radius: 5px;
+        font-size: 30px;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="card"></div>
+    <input type="text" id="answer"/>
+    <button onclick="answerQuestion();">answer</button> 
+    <script type="text/javascript">
+      
+      var currentFlashCard = -1;
+
+      function answerQuestion(){
+                var userChoice = document.getElementById("answer");
+        if (userChoice.value == answer[0]){ 
+          alert("correct!");
+        } else {
+          alert("inccorrect sorry!")}
+      }
+
+      var question = ["What is my favorite color?","what is this","where am I?"];
+console.log(question[0])
+  function ShowNextFlashCard() {
+    currentFlashCard = currentFlashCard + 1;
+     
+     var cardDiv = document.getElementById("card")
+    var theQuestion = question[currentFlashCard];
+    cardDiv.textcontent = theQuestion;
+  }
+
+      var question_number = document.getElementById("card");
+      question_number.innerHTML = question[0] 
+      var answer = ["Blue","a flashcard","thoughtworks"]
+      var answer_number = document.getElementById("answer");
+      
+      ShowNextFlashCard();
+
+    </script>
+  </body>
+</html>
